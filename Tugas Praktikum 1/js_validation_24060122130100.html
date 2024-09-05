@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Tambah Data Produk</title>
+    <style>
+        body {
+            font-family: Arial;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 5px;
+            margin-top: 5px;
+        }
+        .error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <script src="js_validation.js"></script>
+
+    <h1>Form Tambah Data Produk</h1>
+    <form id="productForm" action="" method="GET">
+        <label for="namaProduk">Nama Produk</label>
+        <input type="text" id="namaProduk" name="namaProduk">
+        <div id="namaProdukError" class="error"></div>
+
+        <label for="deskripsi">Deskripsi</label>
+        <textarea id="deskripsi" name="deskripsi"></textarea>
+        <div id="deskripsiError" class="error"></div>
+
+        <label for="kategori">Kategori</label>
+        <select id="kategori" name="kategori">
+            <option value="">--Pilih Kategori--</option>
+            <option value="Baju">Baju</option>
+            <option value="Elektronik">Elektronik</option>
+            <option value="Alat Tulis">Alat Tulis</option>
+        </select>
+        <div id="kategoriError" class="error"></div>
+
+        <label for="subKategori">Sub Kategori</label>
+        <select id="subKategori" name="subKategori">
+            <option value="">--Pilih Sub Kategori--</option>
+        </select>
+        <div id="subKategoriError" class="error"></div>
+
+        <label for="hargaSatuan">Harga Satuan</label>
+        <input type="text" id="hargaSatuan" name="hargaSatuan">
+        <div id="hargaSatuanError" class="error"></div>
+
+        <label>Grosir</label>
+        <input type="radio" id="grosirYa" name="grosir" value="Ya"> Ya
+        <input type="radio" id="grosirTidak" name="grosir" value="Tidak"> Tidak
+        <div id="grosirError" class="error"></div>
+
+        <label for="hargaGrosir">Harga Grosir</label>
+        <input type="text" id="hargaGrosir" name="hargaGrosir" disabled>
+        <div id="hargaGrosirError" class="error"></div>
+
+        <label>Jasa Kirim</label><br>
+        <input type="checkbox" name="jasaKirim" value="JNE"> JNE
+        <input type="checkbox" name="jasaKirim" value="TIKI"> TIKI
+        <input type="checkbox" name="jasaKirim" value="SiCepat"> SiCepat
+        <input type="checkbox" name="jasaKirim" value="Ninja Express"> Ninja Express
+        <input type="checkbox" name="jasaKirim" value="Wahana"> Wahana
+        <div id="jasaKirimError" class="error"></div>
+
+        <label for="captcha">Captcha</label>
+        <input type="text" id="captcha" name="captcha" readonly>
+        <input type="text" id="captchaInput" name="captchaInput">
+        <div id="captchaError" class="error"></div>
+
+        <br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>
